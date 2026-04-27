@@ -77,6 +77,15 @@
     font-weight: 300;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Roboto Slab';
+    src: local('Roboto Slab Medium'), local('Roboto-Slab-Medium'),
+        url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Medium.woff') format('woff'),
+        url('../fonts/RobotoSlab-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
 @font-face {
     font-family: 'Roboto Slab';
     src: local('Roboto Slab Bold'), local('Roboto-Slab-Bold'),

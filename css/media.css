@@ -256,6 +256,95 @@
         padding-bottom: 20px;
         padding-top: 15px;
     }
+    .billbord-page .title-section {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.billbord-page__descr {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.billbord-page__text {
+    font-size: 15px;
+}
+.billbord-page__content {
+    max-width: 535px;
+}
+.billbord-page__main {
+    padding: 18px 35px;
+    min-height: 470px;
+}
+.billbord-page .breadcrumbs {
+    padding-bottom: 55px;
+}
+.breadcrumbs {
+    font-size: 12px;
+}
+.about-advantages .title-section {
+    margin-bottom: 30px;
+}
+.about-advantages__grid {
+    gap: 30px 60px;
+}
+.unit-advantage__head {
+    margin-bottom: 18px;
+    gap: 15px;
+}
+.unit-advantage__icon {
+    width: 92px;
+    height: 92px;
+}
+.title-block {
+    font-size: 18px;
+}
+.consultation__main .title-section {
+    max-width: 795px;
+    margin-bottom: 22px;
+}
+.consultation__main {
+    padding: 28px 35px;
+}
+.consultation__form {
+    max-width: 515px;
+}
+.consultation__form .btn-main {
+    width: 280px;
+    margin-top: 20px;
+}
+.item-form textarea, .item-form input {
+    height: 48px;
+    padding: 0 15px;
+    font-size: 13px;
+}
+.input-upload__content {
+    height: 48px;
+    padding: 0 8px;
+    font-size: 13px;
+}
+.item-form textarea {
+    height: 100px;
+    padding-top: 13px;
+}
+.checkbox label {
+    gap: 15px;
+}
+.consultation__form .checkbox {
+    margin-top: 14px;
+    font-size: 13px;
+}
+.page-delivery,
+.consultation {
+    padding-bottom: 70px;
+}
+.item-select {
+    font-size: 13px;
+}
+.item-select__dropdown {
+    width: 260px;
+}
+.pager {
+    gap: 40px;
+}
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -265,6 +354,15 @@
     .footer__wrapper, .wrapper-page {
         display: block;
     }
+        .billbord-page__content {
+        max-width: 496px;
+    }
+    .main-filter {
+    flex-wrap: wrap;
+}
+.main-filter .btn-main {
+    margin-left: 0;
+}
 }
 
 /* Medium Devices, Desktops */
@@ -703,6 +801,106 @@
     .checkbox {
         margin-top: 20px;
     }
+    .about-advantages__grid {
+       grid-template-columns: 1fr;
+    }
+    .about-advantages__image {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    .billbord-page__main {
+        padding: 15px;
+        padding-bottom: 50px;
+        background-position: 70% 50%;
+        min-height: initial;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+    .billbord-page .breadcrumbs {
+        padding-bottom: 35px;
+        color: #fff;
+    }
+    .billbord-page .breadcrumbs a {
+        color: #fff;
+    }
+    .billbord-page .breadcrumbs a:hover {
+        border-color: #fff;
+    }
+        .billbord-page .title-section {
+        font-size: 28px;
+        color: #fff;
+        margin-bottom: 17px;
+    }
+        .billbord-page__descr {
+        font-size: 15px;
+        margin-bottom: 9px;
+        line-height: 140%;
+    }
+        .billbord-page__text {
+        font-size: 13px;
+        line-height: 140%;
+    }
+        .billbord-page__main::before {
+        position: absolute;
+        display: block;
+        content: " ";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .partners {
+        padding-top: 50px;
+    }
+    .consultation__main {
+        padding: 30px 15px;
+        background-position: left center;
+    }
+    .consultation__form .btn-main {
+        width: 100%;
+    }
+    .page-delivery,
+    .consultation {
+        padding-bottom: 50px;
+    }
+        .top-filter {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .view-catalog {
+        margin: 0;
+        margin-left: auto;
+    }
+    .btn-filter {
+        display: flex;
+        width: 100%;
+    }
+    .page-catalog {
+        padding-bottom: 60px;
+    }
+    .item-select {
+        width: 48%;
+    }
+    .item-select__dropdown {
+        left: 0;
+        transform: none;
+    }
+    .item-select:nth-child(even) .item-select__dropdown {
+        right: 0;
+        left: auto;
+    }
+    .main-filter {
+        gap: 11px;
+    }
+    .main-filter .btn-main {
+        padding: 0 12px;
+        height: 38px;
+        font-size: 13px;
+        width: 48%;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -738,14 +936,17 @@
     .sandwich {
         display: none !important;
     }
-    .search-main,
-    .sidebar {
+    .search-main {
         display: block !important;
     }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {}
+@media only screen and (min-width : 1200px) {
+    .sidebar {
+        display: block !important;
+    }
+}
 @media (min-width: 1600px) {}
 
 

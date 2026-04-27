@@ -64,6 +64,8 @@ $(document).ready(function () {
 		filename_text.html(filename);
 	});
 
+	
+
 	$(".btn-favorite").click(function () {
 			$(this).toggleClass("active");
 	});
@@ -79,6 +81,92 @@ $(document).ready(function () {
 			$(this).siblings(".menu__dropdown").slideUp(200);
 			$(this).parent().removeClass("active");
 		}
+	});
+
+	//select catalog	
+$(".item-select__value").click(function() {
+	$(".item-select__dropdown").slideUp(200);
+	$(".item-select__value").removeClass("active");
+	if ($(this).siblings(".item-select__dropdown").is(":hidden")) {
+		$(this).siblings(".item-select__dropdown").slideDown(200);
+		$(this).addClass("active");
+	} else {
+		$(this).siblings(".item-select__dropdown").slideUp(200);
+		$(this).removeClass("active");
+	}
+});
+
+$(document).mouseup(function (e) {
+    var container = $(".item-select");
+    if (container.has(e.target).length === 0){
+		$(".item-select__dropdown").slideUp(200);
+		$(".item-select__value").removeClass("active");
+    }
+  });
+
+  /*range slider*/
+
+	$('.input-range').each(function () {
+		var $range = $(this).find(".range-controls__slider"),
+			$from_input = $(this).find(".input-range__from"),
+			$to_input = $(this).find(".input-range__to"),
+			from = +$range.attr("from"),
+			to = +$range.attr("to"),
+			min = +$range.attr("min"),
+			max = +$range.attr("max");
+
+		function formatNumber(num) {
+			return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		}
+
+		function cleanNumber(str) {
+			return str.replace(/\s+/g, '');
+		}
+
+		$range.ionRangeSlider({
+			type: "double",
+			min: min,
+			max: max,
+			from: from,
+			to: to,
+			postfix: " Р",
+			prettify_enabled: true,
+			onChange: function () {
+				updateValues();
+			}
+		});
+
+		$range = $range.data("ionRangeSlider");
+
+		var updateValues = function () {
+			var res = $range.result;
+			$from_input.val(formatNumber(res.from));
+			$to_input.val(formatNumber(res.to));
+		};
+
+		$from_input
+			.on("focus", function () {
+				this.value = cleanNumber(this.value);
+				this.selectionStart = this.value.length;
+			})
+			.on("input", function () {
+				var val = cleanNumber(this.value);
+				$range.update({ from: val });
+			})
+			.on("blur", updateValues);
+
+		$to_input
+			.on("focus", function () {
+				this.value = cleanNumber(this.value);
+				this.selectionStart = this.value.length;
+			})
+			.on("input", function () {
+				var val = cleanNumber(this.value);
+				$range.update({ to: val });
+			})
+			.on("blur", updateValues);
+
+		updateValues();
 	});
 
 	//contacts tabs
@@ -146,6 +234,9 @@ $(document).ready(function () {
             }
         ]
     });
+
+		 // стайлер для select
+	 $('select').styler();
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 

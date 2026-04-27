@@ -65,6 +65,7 @@ $(document).ready(function () {
 	});
 
 	
+	
 
 	$(".btn-favorite").click(function () {
 			$(this).toggleClass("active");
@@ -103,6 +104,37 @@ $(document).mouseup(function (e) {
 		$(".item-select__value").removeClass("active");
     }
   });
+
+  	jQuery('.quantity').each(function() {
+		var spinner = jQuery(this),
+		input = spinner.find('input[type="number"]'),
+		btnUp = spinner.find('.quantity-up'),
+		btnDown = spinner.find('.quantity-down'),
+		min = input.attr('min'),
+		max = input.attr('max');
+
+		btnUp.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue >= max) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue + 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+
+		btnDown.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue <= min) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue - 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+	});
 
   /*range slider*/
 
@@ -182,6 +214,15 @@ $(document).mouseup(function (e) {
 		$('.contacts__main-tab').hide();
 		$(`.contacts__main-tab[data-tab="${tabId}"]`).fadeIn(200);
 	});
+
+		$('.tabs li a').click(function(event) {
+		event.preventDefault();
+		$(this).parent().parent().find("li").removeClass('active');
+		$(this).parent().addClass('active');
+		$(".tab-pane").fadeOut(0);
+		var selectTab = $(this).attr("href");
+		$(selectTab).fadeIn(200);
+	  });
 
 	//слайдер
 

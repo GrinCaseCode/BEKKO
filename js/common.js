@@ -36,6 +36,13 @@ $(document).ready(function () {
 		$("body").removeClass("no-scroll");
 	});
 
+		$(".info-dropdown__head").click(function() {
+		$(this).parent().toggleClass("active");
+		$(this).siblings().slideToggle(200);
+		$(this).parent().siblings(".info-dropdown").removeClass("active");
+		$(this).parent().siblings(".info-dropdown").find(".info-dropdown__content").slideUp(200);
+	  });
+
 	{
 		if ($(window).width() < 992) {
 			$(".item-accordion__head").click(function () {

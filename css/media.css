@@ -1460,7 +1460,7 @@
     .btn-main--border:active {
         color: #fff;
     }
-    a.item-news__title:active {
+    a.item-news__title:active { 
         color: #F07D00;
     }
     .item-news:active {

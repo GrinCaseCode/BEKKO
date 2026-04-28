@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.css" />
+	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
+	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="libs/ion.rangeSlider-master/css/ion.rangeSlider.min.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
+	<link rel="stylesheet" href="css/fonts.css?ver=1.5" />
+	<link rel="stylesheet" href="css/main.css?ver=1.5" />
+	<link rel="stylesheet" href="css/media.css?ver=1.5" />
+</head>
+<body> 
+
+	<div class="wrapper">
+
+		<div class="wrapper-page">
+
+			<div class="fixed-buttons">
+				<a href="#modal-login" class="fixed-buttons__btn fancybox">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_392)"><path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_2_392"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+				</a>
+				<div class="fixed-buttons__btn open-search">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3_35)"><path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#1A0D00"></path></g><defs><clipPath id="clip0_3_35"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg>
+					<i class="fal fa-times"></i>
+				</div>
+				<a href="#" class="fixed-buttons__btn">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_411)"><path d="M12.001 4.529C14.35 2.42 17.98 2.49 20.243 4.757C22.505 7.025 22.583 10.637 20.479 12.993L11.999 21.485L3.52101 12.993C1.41701 10.637 1.49601 7.019 3.75701 4.757C6.02201 2.493 9.64501 2.417 12.001 4.529ZM18.827 6.17C17.327 4.668 14.907 4.607 13.337 6.017L12.002 7.215L10.666 6.018C9.09101 4.606 6.67601 4.668 5.17201 6.172C3.68201 7.662 3.60701 10.047 4.98001 11.623L12 18.654L19.02 11.624C20.394 10.047 20.319 7.665 18.827 6.17Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_2_411"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+				</a>
+				<a href="#" class="fixed-buttons__btn">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_410)"><path d="M4 16V4H2V2H5C5.26522 2 5.51957 2.10536 5.70711 2.29289C5.89464 2.48043 6 2.73478 6 3V15H18.438L20.438 7H8V5H21.72C21.872 5 22.022 5.03466 22.1586 5.10134C22.2952 5.16801 22.4148 5.26495 22.5083 5.38479C22.6019 5.50462 22.6668 5.6442 22.6983 5.79291C22.7298 5.94162 22.7269 6.09555 22.69 6.243L20.19 16.243C20.1358 16.4592 20.011 16.6512 19.8352 16.7883C19.6595 16.9255 19.4429 17 19.22 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16ZM6 23C5.46957 23 4.96086 22.7893 4.58579 22.4142C4.21071 22.0391 4 21.5304 4 21C4 20.4696 4.21071 19.9609 4.58579 19.5858C4.96086 19.2107 5.46957 19 6 19C6.53043 19 7.03914 19.2107 7.41421 19.5858C7.78929 19.9609 8 20.4696 8 21C8 21.5304 7.78929 22.0391 7.41421 22.4142C7.03914 22.7893 6.53043 23 6 23ZM18 23C17.4696 23 16.9609 22.7893 16.5858 22.4142C16.2107 22.0391 16 21.5304 16 21C16 20.4696 16.2107 19.9609 16.5858 19.5858C16.9609 19.2107 17.4696 19 18 19C18.5304 19 19.0391 19.2107 19.4142 19.5858C19.7893 19.9609 20 20.4696 20 21C20 21.5304 19.7893 22.0391 19.4142 22.4142C19.0391 22.7893 18.5304 23 18 23Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_2_410"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+				</a>
+			</div>
+
+			<div class="sidebar">
+				<div class="sidebar__content">
+					<div class="logo-wrap">
+						<a href="#" class="logo">
+							<img src="img/logo.svg" alt="alt">
+						</a>
+						<div class="logo-descr">Детали для сельского хозяйства</div>
+					</div>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li><a href="#">Стать партнёром</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Новости</a></li>
+						</ul>
+					</nav>
+					<nav class="menu">
+						<ul class="menu__list">
+							<li class="menu__haschild">
+								<a href="#">Ремни OPTIBELT</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Ремни TOYOPOWER</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Муфты и эластичные элементы</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Подшипники</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Рукава высокого давления</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Системы среза</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Тросы дистанционного управления</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Запчасти для комбайнов</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Цепи</a>
+								<div class="menu__arrow"><i class="fas fa-chevron-down"></i></div>
+								<div class="menu__dropdown">
+									<ul>
+										<li><a href="#">Для импортной техники</a></li>
+										<li><a href="#">Клиновой</a></li>
+										<li><a href="#">Узкий клиновой</a></li>
+										<li><a href="#">Вентиляторный</a></li>
+										<li><a href="#">Вариаторный</a></li>
+										<li><a href="#">Многоручьевой</a></li>
+										<li><a href="#">Поликлиновой</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="menu-overlay"></div>
+			<div class="search-overlay"></div>
+
+			<div class="content">
+
+				<header class="header">
+					<div class="container">
+						<div class="header__wrapper">
+							<div class="logo-wrap">
+								<a href="#" class="logo">
+									<img src="img/logo.svg" alt="alt">
+								</a>
+								<div class="logo-descr">Детали для сельского хозяйства</div>
+							</div>
+							<nav class="nav">
+								<ul class="nav__list">
+									<li><a href="#">Стать партнёром</a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Новости</a></li>
+								</ul>
+							</nav>
+							<div class="search-main">
+								<form>
+									<input type="text" placeholder="Поиск" required>
+									<button class="search-main__btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3_35)"><path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_3_35"><rect width="24" height="24" fill="white" /></clipPath></defs></svg></button>
+								</form>
+							</div>
+							<a href="mailto:s.artecki@yandex.ru" class="link-email">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_6_130)"><path d="M3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM20 7.238L12.072 14.338L4 7.216V19H20V7.238ZM4.511 5L12.061 11.662L19.502 5H4.511Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_6_130"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+								s.artecki@yandex.ru
+							</a>
+							<a href="#" class="header__btn">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_411)"><path d="M12.001 4.529C14.35 2.42 17.98 2.49 20.243 4.757C22.505 7.025 22.583 10.637 20.479 12.993L11.999 21.485L3.52101 12.993C1.41701 10.637 1.49601 7.019 3.75701 4.757C6.02201 2.493 9.64501 2.417 12.001 4.529ZM18.827 6.17C17.327 4.668 14.907 4.607 13.337 6.017L12.002 7.215L10.666 6.018C9.09101 4.606 6.67601 4.668 5.17201 6.172C3.68201 7.662 3.60701 10.047 4.98001 11.623L12 18.654L19.02 11.624C20.394 10.047 20.319 7.665 18.827 6.17Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_2_411"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+							</a>
+							<a href="#modal-login" class="header__btn fancybox">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_392)"><path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_2_392"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+							</a>
+							<a href="#" class="header__btn">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_410)"><path d="M4 16V4H2V2H5C5.26522 2 5.51957 2.10536 5.70711 2.29289C5.89464 2.48043 6 2.73478 6 3V15H18.438L20.438 7H8V5H21.72C21.872 5 22.022 5.03466 22.1586 5.10134C22.2952 5.16801 22.4148 5.26495 22.5083 5.38479C22.6019 5.50462 22.6668 5.6442 22.6983 5.79291C22.7298 5.94162 22.7269 6.09555 22.69 6.243L20.19 16.243C20.1358 16.4592 20.011 16.6512 19.8352 16.7883C19.6595 16.9255 19.4429 17 19.22 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16ZM6 23C5.46957 23 4.96086 22.7893 4.58579 22.4142C4.21071 22.0391 4 21.5304 4 21C4 20.4696 4.21071 19.9609 4.58579 19.5858C4.96086 19.2107 5.46957 19 6 19C6.53043 19 7.03914 19.2107 7.41421 19.5858C7.78929 19.9609 8 20.4696 8 21C8 21.5304 7.78929 22.0391 7.41421 22.4142C7.03914 22.7893 6.53043 23 6 23ZM18 23C17.4696 23 16.9609 22.7893 16.5858 22.4142C16.2107 22.0391 16 21.5304 16 21C16 20.4696 16.2107 19.9609 16.5858 19.5858C16.9609 19.2107 17.4696 19 18 19C18.5304 19 19.0391 19.2107 19.4142 19.5858C19.7893 19.9609 20 20.4696 20 21C20 21.5304 19.7893 22.0391 19.4142 22.4142C19.0391 22.7893 18.5304 23 18 23Z" fill="#1A0D00" /></g><defs><clipPath id="clip0_2_410"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+							</a>
+							<a href="tel:+79118922862" class="phone-mobile"><i class="fas fa-phone-alt"></i></a>
+							<div class="sandwich">
+								<div class="sw-topper"></div>
+								<div class="sw-bottom"></div>
+								<div class="sw-footer"></div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="billbord-page billbord-page--suppliers">
+					<div class="container">
+						<div class="billbord-page__main">
+							<ul class="breadcrumbs">
+								<li><a href="#">Главная</a></li>
+								<li>Стать партнером</li>
+							</ul>
+							<div class="billbord-page__content">
+								<h1 class="title-section">Стать партнером</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="for-suppliers">
+					<div class="container">
+						<h2 class="title-section">мы предлагаем</h2>
+						<div class="for-suppliers__grid">
+							<div class="unit-advantage">
+								<div class="unit-advantage__head">
+									<div class="unit-advantage__icon">
+										<img src="img/ic_suppliers1.svg" alt="alt">
+									</div>
+									<div class="title-block">Реализацию товара</div>
+								</div>
+								<p>Размещение вашего товара в отдельной группе каталога и отображение логотипа/бренда на главной странице сайта</p>
+							</div>
+							<div class="unit-advantage">
+								<div class="unit-advantage__head">
+									<div class="unit-advantage__icon">
+										<img src="img/ic_suppliers2.svg" alt="alt">
+									</div>
+									<div class="title-block">Персональный менеджер</div>
+								</div>
+								<p>Работаете с личными менеджерами по ассортименту и по поставкам</p>
+							</div>
+							<div class="unit-advantage">
+								<div class="unit-advantage__head">
+									<div class="unit-advantage__icon">
+										<img src="img/ic_suppliers3.svg" alt="alt">
+									</div>
+									<div class="title-block">Собственные склады</div>
+								</div>
+								<p>Храним закупленный товар на своих складах по всей территории России</p>
+							</div>
+							<div class="unit-advantage">
+								<div class="unit-advantage__head">
+									<div class="unit-advantage__icon">
+										<img src="img/ic_suppliers4.svg" alt="alt">
+									</div>
+									<div class="title-block">Ответственность</div>
+								</div>
+								<p>Отгружаем товар из наличия в течение 1 рабочего дня</p>
+							</div>
+							<div class="unit-advantage">
+								<div class="unit-advantage__head">
+									<div class="unit-advantage__icon">
+										<img src="img/ic_suppliers5.svg" alt="alt">
+									</div>
+									<div class="title-block">Оперативность</div>
+								</div>
+								<p>Доставляем заказы во все регионы России максимально оперативно</p>
+							</div>
+							<div class="unit-advantage">
+								<div class="unit-advantage__head">
+									<div class="unit-advantage__icon">
+										<img src="img/ic_suppliers6.svg" alt="alt">
+									</div>
+									<div class="title-block">Взаимовыгоду</div>
+								</div>
+								<p>Получаете обратную связь о возможности расширения ассортимента и сотрудничества</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="suppliers-form">
+					<div class="container">
+						<div class="suppliers-form__main">
+							<h2 class="title-section">Как начать продавать свои товары на сайте</h2>
+							<div class="suppliers-form__content">
+								<div class="suppliers-form__step">
+									<div class="suppliers-form__count">1</div>
+									<div class="suppliers-form__title">Заполните анкету о вашей компании и ассортименте. <br>Мы рассмотрим ее и дадим ответ в срок до 5 дней</div>
+									<form>
+										<div class="row">
+											<div class="col-lg-4">
+												<div class="item-form">
+													<input type="text" placeholder="Название компании" required>
+												</div>
+											</div>
+											<div class="col-lg-4">
+												<div class="item-form">
+													<input type="text" placeholder="ИНН" required>
+												</div>
+											</div>
+											<div class="col-lg-4">
+												<div class="input-upload">
+													<label>
+														<input type="file" name="file">
+														<div class="input-upload__content">
+															<i class="fal fa-paperclip"></i>
+															Прикрепить файл
+														</div>
+													</label>
+													<div class="name-upload"></div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="item-form">
+													<textarea placeholder="Сообщение" required></textarea>
+												</div>
+											</div>
+											<div class="col-lg-8 col-checkbox">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" checked required />
+														<span>Я даю согласие на обработку моих персональных данных ООО “Мегастар” (ИНН: 3123411694) в целях обработки заявки и обратной связи. Политика конфиденциальности — <a href="#">по ссылке.</a></span>
+													</label>
+												</div>
+											</div>
+											<div class="col-lg-4">
+												<input type="submit" class="btn-main" value="Отправить">
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="suppliers-form__step">
+									<div class="suppliers-form__count">2</div>
+									<div class="suppliers-form__title">После этого мы заключаем с Вами договор и даём доступ к тысячам наших клиентов</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__sidebar"></div>
+				<div class="footer__content">
+					<div class="container">
+						<div class="footer__grid">
+							<div class="footer__column">
+								<div class="footer__logo">
+									<a href="#" class="logo">
+										<img src="img/logo2.svg" alt="alt">
+									</a>
+									<div class="logo-descr">Детали для сельского хозяйства</div>
+								</div>
+							</div>
+							<div class="footer__column">
+								<ul class="footer__nav">
+									<li><a href="#">Ремни OPTIBELT</a></li>
+									<li><a href="#">Ремни TOYOPOWER</a></li>
+									<li><a href="#">Муфты и эластичные элементы</a></li>
+									<li><a href="#">Подшипники</a></li>
+									<li><a href="#">Рукава высокого давления</a></li>
+									<li><a href="#">Системы среза</a></li>
+								</ul>
+							</div>
+							<div class="footer__column">
+								<ul class="footer__nav">
+									<li><a href="#">Тросы дистанционного управления</a></li>
+									<li><a href="#">Запчасти для комбайнов</a></li>
+									<li><a href="#">Цепи</a></li>
+									<li><a href="#">Новое поступление</a></li>
+									<li><a href="#">Часто запрашивают</a></li>
+								</ul>
+							</div>
+							<div class="footer__column">
+								<ul class="footer__nav footer__nav--default">
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Стать диллером</a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="footer__column">
+								<div class="footer__contacts">
+									<p><a href="tel:+79118922862" class="footer__phone">+7 (911) 892 28 62</a></p>
+									<p><a href="mailto:s.artecki@yandex.ru">s.artecki@yandex.ru</a></p>
+									<p>Ростов-на Дону, <br>ул. Геологическая, 5</p>
+									<a href="#" class="btn-main btn-main--page">Как сделать заказ</a>
+									<a href="#" class="btn-main">Обратная связь</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__wrapper">
+					<div class="footer__sidebar"></div>
+					<div class="footer__content">
+						<div class="container">
+							<div class="footer__line">
+								<div class="footer__links">
+									<a href="#">Политика конфиденциальности</a>
+									<a href="#">Согласие на обработку персональных данных</a>
+								</div>
+								<div class="copyright">© Copyright 2026 г.</div>
+								<div class="create">Сделано в <a href="#" target="_blank"><img src="img/sheer.svg" alt="alt"></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+	</div>
+
+	<div id="modal-login" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-modal">Вход</div>
+			<form>
+				<div class="item-form">
+					<input type="tel" class="input-phone" placeholder="+7 (978) 123-45-67" inputmode="numeric">
+				</div>
+				<div class="modal-wrap__link">
+					<a href="#modal-registration" class="fancybox">Регистрация</a>
+				</div>
+				<input type="submit" value="Получить код" class="btn-main">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" checked required />
+						<span>Согласие на обработку персональных данных</span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-registration" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-modal">Регистрация</div>
+			<form>
+				<div class="item-form">
+					<input type="text" placeholder="ИНН компании">
+				</div>
+				<div class="item-form">
+					<input type="email" placeholder="Почта" inputmode="email">
+				</div>
+				<div class="item-form">
+					<input type="tel" class="input-phone" placeholder="+7 (978) 123-45-67" inputmode="numeric">
+				</div>
+				<input type="submit" value="Получить код" class="btn-main">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" checked required />
+						<span>Согласие на обработку персональных данных</span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
+	<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
+	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+	<script src="libs/ion.rangeSlider-master/js/ion.rangeSlider.min.js"></script>
+	<script src="libs/mask/jquery.maskedinput.js"></script>
+	<script src="js/common.js?ver=1.5"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

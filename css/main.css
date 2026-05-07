@@ -94,7 +94,7 @@ form {
 	grid-template-columns: 0.267fr 1fr;
 }
 .wrapper-page {
-	min-height: 100vh;
+	min-height: 75vh;
 }
 .container {
 	padding: 0 70px;
@@ -2626,7 +2626,7 @@ input[type=number] {
 }
 .page-thanks {
 	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 .thanks-main {
 	min-height: 540px;
